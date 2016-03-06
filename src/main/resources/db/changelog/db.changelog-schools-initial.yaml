@@ -1,0 +1,51 @@
+# https://docs.spring.io/spring-security/site/docs/3.0.x/reference/appendix-schema.html
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Miguel
+      changes:
+        - createTable:
+            tableName: schools
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+
+  - changeSet:
+      id: 4
+      author: Miguel
+      changes:
+        - insert:
+            tableName: schools
+            columns:
+              - column:
+                  name: name
+                  value: School1
+              - column:
+                  name: description
+                  value: good
+        - insert:
+            tableName: schools
+            columns:
+              - column:
+                  name: name
+                  value: School2
+              - column:
+                  name: description
+                  value: not good
+                  

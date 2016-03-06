@@ -1,0 +1,6 @@
+# 
+databaseChangeLog:
+  - include:
+      file: db/changelog/db.changelog-users-initial.yaml
+  - include:
+      file: db/changelog/db.changelog-schools-initial.yaml

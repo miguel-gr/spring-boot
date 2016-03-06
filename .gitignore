@@ -1,0 +1,18 @@
+
+# exclude target
+target
+
+# Openshift config
+.openshift
+
+# Logs
+derby.log
+test.*
+
+# Mvn
+.mvn
+
+# Eclipse
+.classpath
+.project
+.settings
